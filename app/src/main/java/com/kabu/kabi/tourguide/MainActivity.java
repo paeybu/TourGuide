@@ -1,5 +1,6 @@
 package com.kabu.kabi.tourguide;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new TourAdapter(getSupportFragmentManager());
 
         mViewPager.setAdapter(mAdapter);
+
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(mViewPager);
 
     }
 }
