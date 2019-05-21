@@ -8,11 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 public class MallFragment extends Fragment {
+
+    private ArrayList<String> mAttraction;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.mall_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.mall_fragment, container, false);
+
+
+
+        return rootView;
     }
 }
