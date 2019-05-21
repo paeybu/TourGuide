@@ -4,19 +4,34 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/name_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        style="@style/nameTheme"/>
+    <ImageView
+        android:id="@+id/attraction_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/watpikulngoen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/address_text_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name_text_view"
-        android:text="address"
-        style="@style/addressTheme"/>
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/attraction_image">
+        <TextView
+            android:id="@+id/name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            style="@style/nameTheme"/>
+
+        <TextView
+            android:id="@+id/address_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:textSize="12sp"
+            style="@style/addressTheme"/>
+    </LinearLayout>
 
 </RelativeLayout>

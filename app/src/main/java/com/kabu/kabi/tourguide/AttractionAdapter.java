@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,10 +32,16 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
         TextView nameTv = listItemView.findViewById(R.id.name_text_view);
         TextView addressTv = listItemView.findViewById(R.id.address_text_view);
+        ImageView imageView = listItemView.findViewById(R.id.attraction_image);
 
         nameTv.setText(currentAttraction.getName());
-        Log.v(LOG_TAG, currentAttraction.getName());
         addressTv.setText(currentAttraction.getAddress());
+        int imageId = currentAttraction.getResourceImageId();
+        if (imageId == 0) {
+            imageView.setVisibility(View.GONE);
+        } else {
+            imageView.setImageResource(imageId);
+        }
         return listItemView;
     }
 
